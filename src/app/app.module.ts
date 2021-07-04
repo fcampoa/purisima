@@ -1,8 +1,13 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { QuickAppProMaterialModule } from './core/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { AppRoutes } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -10,9 +15,18 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(AppRoutes, {
+      useHash: true
+    }),
+    QuickAppProMaterialModule,
+    FormsModule, 
+    CommonModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
