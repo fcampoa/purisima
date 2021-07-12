@@ -8,10 +8,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AppRoutes } from './app.routing';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { PersonaComponent } from './components/persona/persona.component';
+import { ConstanciaComponent } from './components/constancia/constancia.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SidebarComponent,
+    AdminComponent,
+    PersonaComponent,
+    ConstanciaComponent
   ],
   imports: [
     BrowserModule,
